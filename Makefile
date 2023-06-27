@@ -3,7 +3,7 @@ SRC_FILE=$(SRC_DIR)/script.bash
 TARGET=system_update
 TARGET_DIR=target
 TARGET_FILE=$(TARGET_DIR)/$(TARGET)
-BIN_LOCATION=/usr/bin/
+BIN_LOCATION=/usr/bin
 
 .DEFAULT_GOAL:=build
 .PHONY: clean remake build
@@ -18,16 +18,16 @@ $(TARGET_FILE): $(SRC_FILE) $(TARGET_DIR)
 	@echo "Building the binary"
 	@cp -r $< $@
 	@echo "Setting correct permissions"
-	@chmod 751 $@
+	@chmod -v 755 $@
 	
 run: $(TARGET_FILE)
 	@./$<
 
 clean:
 	@{\
-		if [ -d $TARGET_DIR ]; then \
+		if [ -d $(TARGET_DIR) ]; then \
 			echo "Cleaning the target directory"; \
-			rm -r $<; \
+			rm -r $(TARGET_DIR); \
 		fi; \
 	}
 
