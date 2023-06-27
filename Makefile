@@ -1,6 +1,6 @@
 SRC_DIR=src
 SRC_FILE=$(SRC_DIR)/script.bash
-TARGET=hello_world
+TARGET=system_update
 TARGET_DIR=target
 TARGET_FILE=$(TARGET_DIR)/$(TARGET)
 BIN_LOCATION=/usr/bin/
