@@ -1,0 +1,8 @@
+# Directories to ignore
+autom4te.cache
+# Files to ignore
+*~
+*.tar.gz
+config.log
+config.status
+Makefile
