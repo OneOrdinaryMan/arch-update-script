@@ -26,7 +26,7 @@ if [[ $start_script == "y" ]] || [[ $start_script == "Y" ]]; then
         sudo pacman-mirrors -f 5
     fi
     echo "Updating the MAIN & AUR packages:"
-    yay -Syu  --devel --noconfirm
+    paru -Syu  --devel --noconfirm
     echo "Updating with RUSTUP"
     rustup update
 
